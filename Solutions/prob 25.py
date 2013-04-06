@@ -46,23 +46,21 @@ Answer:	4782
 
 '''
 
-reqNumOfDigits = 1000
+if __name__ == '__main__':
 
-a = 1
-b = 1
-count = 2
+	reqNumOfDigits = 1000
 
-#print (a)
-#print (b)
+	a = 1
+	b = 1
+	count = 2
 
-while True:
-    c = a + b
-    a = b
-    b = c
-    #print(c)
-    count = count + 1
-    if len(str(c)) == reqNumOfDigits:
-        print(count)
-        break
-
-input()
+	while True:
+		c = a + b
+		a = b
+		b = c
+		
+		count += 1
+		
+		if len(str(c)) == reqNumOfDigits:
+			print(count)
+			break

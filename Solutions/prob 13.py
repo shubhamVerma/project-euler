@@ -127,15 +127,11 @@ Ans - 5537376230
 
 '''
 
-mySum = 0
+if __name__ == '__main__':
+	
+	f = open('prob 13.txt', 'r')
+	myNums = f.read().split('\n')
 
-f = open('prob 13.txt', 'r')
-f_text = f.read()
-myNums = f_text.split()
-
-for i in myNums:
-    mySum += int(i)
-
-myStr = str(int(mySum))
-
-print(myStr[:10])
+	mySum = sum( map(int, myNums) )
+	
+	print(str(mySum)[:10])

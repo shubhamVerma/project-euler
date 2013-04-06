@@ -33,21 +33,14 @@ Ans - 648
 
 def myFact(num):
     fact = 1
-    for i in range(num):
-        fact = fact * (i+1)
+    for i in range(1, num+1):
+        fact = fact * i
 
     return fact
 
+if __name__ == '__main__':
+	hundredFact = myFact(100)
 
-ff = myFact(100)
-mySum = 0
+	mySum = sum( map(int, str(hundredFact)) )
 
-sh = str(ff)
-
-j=""
-
-for j in sh:
-    mySum += int(j)
-
-print(mySum)
-input()
+	print(mySum)

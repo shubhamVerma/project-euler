@@ -30,14 +30,10 @@ Ans - 1366
 
 from math import pow
 
-two_to_thousand = int(pow(2,1000))
+if __name__ == '__main__':
 
-str_two_to_thousand = str(two_to_thousand)
+	two_to_thousand = int( pow(2,1000) )
 
-j = ''
-mySum = 0
+	mySum = sum( map(int, str(two_to_thousand)) )
 
-for j in str_two_to_thousand:
-    mySum += int(j)
-
-print(mySum)
+	print(mySum)
